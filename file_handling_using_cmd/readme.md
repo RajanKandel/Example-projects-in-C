@@ -1,7 +1,7 @@
-#Read files and operate on file
+# Read files and operate on file
 -> Able to read file and operate on it
 
-#How to use?
+# How to use?
 
 - You can fork or download the repo, Once you have both the files "read_file.exe" and "read_file.c", You just need to run "read_file.exe"
 
