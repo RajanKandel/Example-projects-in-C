@@ -1,0 +1,60 @@
+/*file hadling */
+
+// broken
+FILE *f = fopen(input_filename, "r");
+if (f == NULL)
+{ /* error handling code */
+}
+else
+{
+    while (fgetc(f) != EOF)
+    {
+        char c = fgetc(f);
+        printf("%c", c);
+    }
+}
+//...other code...
+
+// fixed
+FILE *f = fopen(inputfilename, "r");
+if (f == NULL)
+{ /* error handling code */
+}
+else
+{
+    int c;
+    while ((c = fgetc(f)) != EOF)
+    {
+        printf("%c", c);
+    }
+}
+//...other code...
+
+// function to count the number of letters in the file
+// command line input: gcc script_filename -o exe_filename filename_to_count_letters
+int main(int argc, char **argv) // argc: argument count, argv: argument vector as the array of string from the command line
+{
+    if (argc != 2)
+    { /*error handling code*/
+    }
+    else
+    {
+        FILE *f = fopen(argv[1], "r");
+        if (f = NULL)
+        { /* Error handling code */
+        }
+        else
+        {
+            int c;
+            int countletters;
+            while ((c = fgetc(f)) != EOF)
+            {
+                if (isalpha(c))
+                {
+                    countletters++;
+                }
+            }
+            printf('Number of letters in %s is: %d', argv[1], countletters);
+        }
+    }
+}
