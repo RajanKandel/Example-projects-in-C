@@ -8,4 +8,4 @@
 ## eg command line input
 
 - compile c code: gcc read_file.c -o read_file
-= run program: ./read_file.exe ./files/textnum1.txt
+- run program: ./read_file.exe ./files/textnum1.txt
